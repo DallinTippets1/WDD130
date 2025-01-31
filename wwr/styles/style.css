@@ -1,117 +1,159 @@
-/* General Page Styling */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+  --primary-color: #2C3E50;
+  --secondary-color: #E74C3C;
+  --accent1-color: #F39C12;
+  --accent2-color: #ECF0F1;
+
+  --heading-font: 'Playfair Display', serif;
+  --paragraph-font: 'Roboto', sans-serif;
+
+  --headline-color-on-white: #2C3E50;
+  --headline-color-on-color: #ECF0F1;
+  --paragraph-color-on-white: #2C3E50;
+  --paragraph-color-on-color: #ECF0F1;
+  --paragraph-background-color: #34495E;
+  --nav-link-color: #ECF0F1;
+  --nav-background-color: #E74C3C;
+  --nav-hover-link-color: #E74C3C;
+  --nav-hover-background-color: #ECF0F1;
+}
+
+/* General Styles */
 body {
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: var(--accent2-color);
+  font-family: var(--paragraph-font);
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-/* Page Container */
 #content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1600px;
+  margin: 0 auto; /* Center the page */
 }
 
-/* Header */
+/* Header Styles */
 header {
-    background-color: rgba(20, 30, 13, 0.85);
-    padding: 15px;
-    text-align: center;
-    color: white;
+  background-color: var(--paragraph-background-color);
+  padding: 20px 0;
 }
 
-/* Navigation */
+.logo {
+  width: 80px; /* Set logo width */
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  padding: 10px 0;
+}
+
 nav a {
-    text-align: center;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+  color: var(--nav-link-color);
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px;
+  display: inline-block;
+  font-family: var(--paragraph-font);
 }
 
 nav a:hover {
-    background-color: #444;
-    color: #ffcc00;
-    text-decoration: underline;
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
 }
 
-/* Hero Section */
-#hero-msg h1, #hero-msg h4 {
-    text-align: center;
+/* Hero Section Styles */
+#hero {
+  position: relative;
 }
 
 #hero-img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%; /* Full width for hero image */
 }
 
-/* Buttons */
-.book, .join {
-    background-color: #008cba;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
+#hero-msg h1,
+#hero-msg h4 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-color);
+  text-align: center;
 }
 
-.book:hover, .join:hover {
-    background-color: #005f7f;
-    color: #fff;
+.button-box {
+  text-align: center;
 }
 
-/* Centering Elements */
-.button-box, main section {
-    text-align: center;
+.book,
+.join {
+  background-color: var(--accent1-color);
+  color: var(--paragraph-color-on-color);
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 10px;
+  font-family: var(--paragraph-font);
 }
 
-/* Background Container */
-#background {
-    height: 725px;
-    background-color: #dcdcdc;
+.book:hover,
+.join:hover {
+  background-color: var(--secondary-color);
+  color: var(--nav-hover-background-color);
 }
 
-/* Message Section */
-.msg {
-    background-color: #eeeeee;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
+/* Main Content Styles */
+main section {
+  text-align: center;
+  margin: 20px 0;
 }
 
-.msg h2, .msg p {
-    color: #333;
-}
-
-/* Footer */
-footer {
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-footer a {
-    color: #ffcc00;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer p {
-    font-size: 1.2em;
-}
-
-/* Logo and Icons */
-.logo {
-    width: 100px;
+.card-img {
+  width: 100%; /* Full width for card images */
+  max-width: 300px; /* Limit maximum width */
 }
 
 .icon {
-    width: 80px;
+  width: 80px; /* Set icon width */
+}
+
+#background {
+  height: 725px; /* Set height for background div */
+  background-color: var(--primary-color);
+}
+
+.msg {
+  background-color: var(--accent1-color);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.msg h2 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-color);
+}
+
+.msg p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-color);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--paragraph-background-color);
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  color: var(--paragraph-color-on-color);
+  font-size: 1.2em; /* Larger font size */
+}
+
+footer a {
+  color: var(--nav-link-color);
+  text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Add underline on hover */
 }
