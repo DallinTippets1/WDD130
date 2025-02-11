@@ -6,8 +6,8 @@
   --accent1-color: #F39C12;
   --accent2-color: #ECF0F1;
 
-  --heading-font: 'Playfair Display', serif;
-  --paragraph-font: 'Roboto', sans-serif;
+  --heading-font: 'Playfair Display', 'Georgia', serif;
+  --paragraph-font: 'Roboto', 'Arial', sans-serif;
 
   --headline-color-on-white: #2C3E50;
   --headline-color-on-color: #ECF0F1;
@@ -20,19 +20,23 @@
   --nav-hover-background-color: #ECF0F1;
 }
 
+/* Reset */
+body, h2 {
+  margin: 0;
+  padding: 0;
+}
+
 /* General Styles */
 body {
   background-color: var(--accent2-color);
   font-family: var(--paragraph-font);
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
+  font-size: 22px;
   text-align: center;
 }
 
 #content {
   max-width: 1600px;
-  margin: 0 auto; /* Center the page */
+  margin: 0 auto;
 }
 
 /* Header Styles */
@@ -42,7 +46,8 @@ header {
 }
 
 .logo {
-  width: 80px; /* Set logo width */
+  width: 80px;
+  padding-top: 5px;
 }
 
 nav {
@@ -52,9 +57,8 @@ nav {
 
 nav a {
   color: var(--nav-link-color);
-  text-align: center;
-  text-decoration: none; /* Remove underline */
-  padding: 10px 20px;
+  text-decoration: none;
+  padding: 35px;
   display: inline-block;
   font-family: var(--paragraph-font);
 }
@@ -70,14 +74,14 @@ nav a:hover {
 }
 
 #hero-img {
-  width: 100%; /* Full width for hero image */
+  width: 100%;
 }
 
 #hero-msg h1,
 #hero-msg h4 {
   font-family: var(--heading-font);
+  font-size: 2em;
   color: var(--headline-color-on-color);
-  text-align: center;
 }
 
 .button-box {
@@ -88,11 +92,13 @@ nav a:hover {
 .join {
   background-color: var(--accent1-color);
   color: var(--paragraph-color-on-color);
-  text-decoration: none; /* Remove underline */
-  padding: 10px 20px;
+  text-decoration: none;
+  padding: 15px 30px;
   display: inline-block;
-  margin: 10px;
+  margin-top: 50px;
   font-family: var(--paragraph-font);
+  font-size: 18px;
+  border-radius: 5px;
 }
 
 .book:hover,
@@ -108,23 +114,26 @@ main section {
 }
 
 .card-img {
-  width: 100%; /* Full width for card images */
-  max-width: 300px; /* Limit maximum width */
+  width: 100%;
+  max-width: 300px;
+  border: 10px solid var(--primary-color);
 }
 
 .icon {
-  width: 80px; /* Set icon width */
+  width: 80px;
+  padding-top: 10px;
 }
 
 #background {
-  height: 725px; /* Set height for background div */
+  height: 725px;
   background-color: var(--primary-color);
 }
 
 .msg {
   background-color: var(--accent1-color);
-  padding: 20px;
+  padding: 35px;
   margin: 20px 0;
+  line-height: 1.5em;
 }
 
 .msg h2 {
@@ -135,25 +144,37 @@ main section {
 .msg p {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-color);
+  font-size: 0.8em;
+  padding-bottom: 15px;
 }
 
 /* Footer Styles */
 footer {
   background-color: var(--paragraph-background-color);
-  padding: 20px 0;
+  padding: 25px 50px;
+  margin-top: 200px;
   text-align: center;
 }
 
 footer p {
   color: var(--paragraph-color-on-color);
-  font-size: 1.2em; /* Larger font size */
+  font-size: 1.2em;
 }
 
 footer a {
   color: var(--nav-link-color);
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
 }
 
 footer a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline;
+}
+
+footer .social img {
+  padding-top: 15px;
+}
+
+/* Box Sizing */
+main section img {
+  box-sizing: border-box;
 }
