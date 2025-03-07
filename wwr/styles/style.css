@@ -219,16 +219,16 @@ main section {
 
 /* Footer Styles */
 footer {
-  background-color: var(--paragraph-background-color);
-  padding: 25px 50px;
-  margin-top: 200px;
-  text-align: center;
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 35px;
+  display: inline-block;
+  font-family: var(--paragraph-font);
+  padding-top: 10%;
+  max-width: fit-content;
+  
 }
-
-footer p {
-  color: var(--paragraph-color-on-color);
-  font-size: 1.2em;
-}
+  
 
 footer a {
   color: var(--nav-link-color);
@@ -238,11 +238,6 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
-footer .social img {
-  padding-top: 15px;
-}
-
 /* Box Sizing */
 main section img {
   box-sizing: border-box;
