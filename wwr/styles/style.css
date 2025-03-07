@@ -217,15 +217,15 @@ main section {
   padding-bottom: 15px;
 }
 
-/* Footer Styles */
+
 footer {
-  color: var(--nav-link-color);
-  text-decoration: none;
-  padding: 35px;
-  display: inline-block;
-  font-family: var(--paragraph-font);
-  padding-top: 10%;
-  max-width: fit-content;
+  background-color: #6f7364;
+  padding: 25px 50px;
+  margin-top: 200px; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
   
 }
   
