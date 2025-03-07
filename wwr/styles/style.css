@@ -217,6 +217,7 @@ main section {
   padding-bottom: 15px;
 }
 
+<<<<<<< HEAD
 
 footer {
   background-color: #6f7364;
@@ -229,6 +230,20 @@ footer {
   
 }
   
+=======
+/* Footer Styles */
+footer {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 35px;
+  display: inline-block;
+  font-family: var(--paragraph-font);
+  padding-top: 10%;
+  max-width: fit-content;
+  
+}
+  
+>>>>>>> 4e99ef1b692a7b517d9178a571c8fb8b820e74d0
 
 footer a {
   color: var(--nav-link-color);
