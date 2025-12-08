@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* FIXED BODY — Proper centering */
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at top, #f3e8d9 0, #786040 55%, #3a2a18 100%);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        #formContainer {
+            width: min(750px, 100%);
+            background-color: #fdfaf5;
+            border-radius: 1rem;
+            padding: 2rem 2.5rem 2.5rem;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+            position: relative;
+        }
+
+        #formContainer h3 {
+            text-align: center;
+            font-size: 1.7rem;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.25rem;
+            color: #3b2b18;
+        }
+
+        .tagline {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #6b5435;
+            margin-bottom: 1.25rem;
+        }
+
+        .scripture-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 0.5rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .scripture-grid img {
+            width: 100%;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1rem 1.5rem;
+            align-items: center;
+        }
+
+        form label {
+            font-weight: 600;
+            color: #3b2b18;
+            text-align: right;
+        }
+
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 0.55rem 0.75rem;
+            border-radius: 0.45rem;
+            border: 1px solid #cbb89b;
+            background-color: #fff;
+            font-size: 0.95rem;
+        }
+
+        form input[type="text"]:focus,
+        form input[type="password"]:focus,
+        form input[type="email"]:focus {
+            outline: 2px solid #d39a3a;
+            border-color: #d39a3a;
+        }
+
+        form div {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        form section {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: #3b2b18;
+        }
+
+        form section:last-of-type {
+            justify-content: flex-end;
+            margin-top: 0.5rem;
+        }
+
+        button[type="submit"] {
+            padding: 0.6rem 1.5rem;
+            border-radius: 999px;
+            border: none;
+            background: linear-gradient(135deg, #d39a3a, #b4721c);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        button[type="submit"]:hover {
+            filter: brightness(1.05);
+            transform: translateY(-1px);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+        }
+
+        #closeBtn {
+            position: absolute;
+            top: 0.9rem;
+            right: 1rem;
+            border: none;
+            background: transparent;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            color: #6b5435;
+        }
+
+        #closeBtn:hover {
+            color: #3b2b18;
+        }
+
+        #output {
+            max-width: 750px;
+            margin: 1.5rem auto 0;
+            padding: 1.25rem 1.5rem;
+            background-color: rgba(253, 250, 245, 0.95);
+            border-radius: 0.9rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        #output h3 {
+            margin-bottom: 0.65rem;
+            color: #3b2b18;
+        }
+
+        #output ul {
+            margin-left: 1.25rem;
+            margin-top: 0.25rem;
+        }
+
+        #output li {
+            margin-bottom: 0.15rem;
+        }
+
+        @media (max-width: 700px) {
+            #formContainer {
+                padding: 1.5rem 1.25rem 2rem;
+                border-radius: 0.8rem;
+            }
+
+            .scripture-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 0.4rem;
+            }
+
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            form label {
+                text-align: left;
+            }
+
+            form section:last-of-type {
+                justify-content: center;
+            }
+
+            #closeBtn {
+                top: 0.6rem;
+                right: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="formContainer">
+        <h3>Sign Up for Daily Scripture Feed</h3>
+        <p class="tagline">Choose your volume of scripture and receive an inspiring verse in your inbox every day.</p>
+
+        <section class="scripture-grid">
+            <img src="images/old_testament.webp" alt="Old Testament">
+            <img src="images/new_testament.webp" alt="New Testament">
+            <img src="images/book_of_mormon.webp" alt="Book of Mormon">
+            <img src="images/doctrine_and_covenants.webp" alt="Doctrine and Covenants">
+            <img src="images/pearl_of_great_price.webp" alt="Pearl of Great Price">
+        </section>
+
+        <form id="myForm">
+            <button type="button" id="closeBtn">X</button>
+
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <section>
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to newsletter</label>
+            </section>
+
+            <section>
+                <input type="checkbox" id="conditions" name="conditions" required>
+                <label for="conditions">I acknowledge the terms and conditions</label>
+            </section>
+
+            <section>
+                <button type="submit">Submit</button>
+            </section>
+        </form>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+        });
+
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+        });
+    </script>
+</body>
+</html>

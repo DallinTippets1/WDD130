@@ -1,0 +1,262 @@
+/* BASIC PAGE SETUP */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f5f5f5;
+  color: #023554;
+}
+
+/* Make all images fill their boxes and sit on top layer */
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2; /* make sure they’re above any backgrounds */
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+}
+
+/* HEADER (logo + title) */
+.site-header {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 2px solid #cfd8e3;
+  background-color: #ffffff;
+}
+
+.logo-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;       /* makes logo appear circular */
+  border: 3px solid #023554;
+  flex-shrink: 0;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* FULL-WIDTH HERO SECTION */
+.hero {
+  width: 100%;
+  margin: 1rem 0;
+  border-bottom: 2px solid #cfd8e3;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+/* The hero image itself */
+.hero img {
+  width: 100%;
+  height: 260px;           /* adjust as needed */
+  object-fit: cover;       /* makes it look professional */
+  display: block;
+  border-radius: 0.75rem;
+}
+
+.hero-box {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #dde7f0;
+}
+
+/* TAGLINE SECTION */
+.tagline {
+  text-align: center;
+  padding: 1.5rem 0 0.5rem;
+}
+
+.tagline h2 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.tagline-lines {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.tagline-lines span {
+  width: 60%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #96cada, #b75139);
+}
+
+/* FEATURE CARDS ROW */
+.feature-row {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 0.7rem;
+  padding: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.feature-card h3 {
+  margin-top: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.feature-img-box {
+  width: 100%;
+  aspect-ratio: 3 / 4;   /* keeps the “portrait” shape like your sketch */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #dde7f0;
+}
+
+/* FOOTER */
+.site-footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  background-color: #ffffff;
+  border-top: 2px solid #cfd8e3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.footer-left {
+  width: 70px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.footer-center p {
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 750px) {
+  .hero-row {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================
+   HOLES PAGE ADDITIONS
+   ============================ */
+
+/* Header bar for Holes page */
+.sub-header {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 2px solid #cfd8e3;
+  background-color: #ffffff;
+}
+
+.sub-header h1 {
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+/* Main wrapper for Holes page */
+.holes-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.holes-title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+/* Two columns that hold the 9 hole cards */
+.holes-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.holes-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Individual hole card with image + description */
+.hole-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #cfd8e3;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* Override global img height for these so aspect-ratio works nicely */
+.hole-card img {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.5rem;
+  border: 2px solid #023554;
+  margin-bottom: 0.5rem;
+}
+
+.hole-card h3 {
+  margin: 0.3rem 0;
+}
+
+.hole-card p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+/* Footer for Holes page */
+.holes-footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 2px solid #cfd8e3;
+}

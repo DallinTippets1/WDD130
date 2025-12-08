@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disc Golf Course | BYUI</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <!-- TOP BAR: logo + title -->
+  <header class="site-header">
+    <div class="logo-box">
+      <img src="images/logo.png" alt="Disc golf logo">
+    </div>
+    <h1>Disc Golf Course</h1>
+  </header>
+
+  <main>
+    <!-- HERO STRIP: three image boxes (sun, basket, disc) -->
+    <section class="hero">
+  <img src="images/hero-disc.jpg" alt="Disc golf hero image">
+</section>
+
+
+    <!-- CENTER TITLE: BYUI DiscGolf -->
+    <section class="tagline">
+      <h2>BYUI DiscGolf</h2>
+      <div class="tagline-lines">
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <!-- THREE CARDS: Holes / DiscGolf / My Discs -->
+    <section class="feature-row">
+      <article class="feature-card">
+        <h3>Holes</h3>
+        <a href="holes.html">
+          <div class="feature-img-box">
+            <img src="images/basket.jpg" alt="Course holes overview">
+          </div>
+        </a>
+      </article>
+
+      <article class="feature-card">
+        <h3>DiscGolf</h3>
+        <a href="rules.html">
+          <div class="feature-img-box">
+            <img src="images/Disc-golf-throw.jpg" alt="Disc golf player throwing">
+          </div>
+        </a>
+      </article>
+
+      <article class="feature-card">
+        <h3>My Discs</h3>
+        <div class="feature-img-box">
+          <img src="images/discs.jpg" alt="Discs in a bag">
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="images/pdga-logo.png" alt="PDGA logo">
+    </div>
+    <div class="footer-center">
+      <p>&copy; <span id="year"></span> ahewynold</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

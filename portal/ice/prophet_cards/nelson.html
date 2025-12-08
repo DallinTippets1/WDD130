@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prophet Card — Russell M. Nelson</title>
+  <!-- Title font: Helvetica (system) fallback to Arial; Quote font: Nanum Brush Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --body:#FFECD7;
+      --card:#008DB1;
+      --card-border:#004E63;
+      --title:#FFFFFF;
+      --subtitle:#91E4FB;
+      --list:#FFFFFF;
+      --quote:#FFD783;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--body);
+      display:grid;
+      place-items:center;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    .card{
+      background:var(--card);
+      border:6px solid var(--card-border);
+      border-radius:26px;
+      width:min(92vw, 520px);
+      padding:28px 26px 32px;
+      box-shadow:0 10px 24px rgba(0,0,0,.20);
+    }
+    .title{
+      color:var(--title);
+      font-size:clamp(28px, 4.2vw, 40px);
+      font-weight:700;
+      letter-spacing:.3px;
+      margin:0 0 .25rem 0;
+      text-align:center;
+    }
+    .subtitle{
+      margin:0 0 18px;
+      text-align:center;
+      font-weight:600;
+      line-height:1.3;
+    }
+    .subtitle a{
+      color:var(--subtitle);
+      text-decoration:none;
+    }
+    .subtitle a:hover{ text-decoration:underline; }
+
+    .portrait{
+      display:block;
+      margin:0 auto 18px;
+      width:min(80%, 320px);
+      border:6px solid #ffffff;
+      box-shadow:0 4px 12px rgba(0,0,0,.25);
+      border-radius:4px;
+      height:auto;
+    }
+    .facts{
+      color:var(--list);
+      margin:12px auto 18px;
+      padding-left:24px;
+      max-width:420px;
+    }
+    .facts li{ margin:.4rem 0; }
+
+    blockquote{
+      margin:8px auto 0;
+      max-width:440px;
+      color:var(--quote);
+      font-family:'Nanum Brush Script', 'Brush Script MT', cursive;
+      font-size:clamp(20px, 3.6vw, 28px);
+      line-height:1.25;
+      text-align:center;
+    }
+    cite{ display:block; color:var(--title); font-style:normal; margin-top:6px; }
+  </style>
+</head>
+<body>
+  <main class="card" role="article" aria-labelledby="name">
+    <h1 id="name" class="title">Russell M. Nelson</h1>
+    <p class="subtitle">
+      <a href="https://www.churchofjesuschrist.org" target="_blank" rel="noopener">
+        17th President of the Church of Jesus Christ of Latter-day Saints
+      </a>
+    </p>
+
+    <img class="portrait" src="images/russell_nelson.png" alt="Portrait of Russell M. Nelson" />
+
+    <ul class="facts">
+      <li><strong>Born:</strong> Sep 9, 1924</li>
+      <li><strong>Apostle:</strong> Apr 7, 1984</li>
+      <li><strong>Prophet:</strong> Jan 14, 2018</li>
+    </ul>
+
+    <blockquote>
+      “I urge you to devote time each week — for the rest of your life — to increase your understanding of the Atonement of Jesus Christ.”
+      <cite>— Russell M. Nelson</cite>
+    </blockquote>
+  </main>
+</body>
+</html>

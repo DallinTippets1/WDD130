@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorite BYU-I Devotionals</title>
+  <link rel="stylesheet" href="devo.css" />
+</head>
+<body>
+  <header>
+    <h1>My Favorite BYU-Idaho Devotionals</h1>
+  </header>
+
+  <main>
+    <div class="content-box">
+      <h2>Top 3 Favorite Devotionals</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Speaker</th>
+            <th>Title</th>
+            <th>Location</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jeffrey R. Holland</td>
+            <td>“The Miracle of a Mission”</td>
+            <td>BYU-Idaho Center</td>
+            <td>2019</td>
+          </tr>
+          <tr>
+            <td>Henry B. Eyring</td>
+            <td>“Education for Real Life”</td>
+            <td>BYU-Idaho Center</td>
+            <td>2016</td>
+          </tr>
+          <tr>
+            <td>Russell M. Nelson</td>
+            <td>“A Prophet’s Counsel to the Students”</td>
+            <td>BYU-Idaho Center</td>
+            <td>2018</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Add Another Devotional</h2>
+      <form>
+        <label for="speaker">Speaker:</label>
+        <input type="text" id="speaker" name="speaker" placeholder="Enter speaker name" required>
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter devotional title" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter location" required>
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" placeholder="Enter year" required>
+
+        <button type="submit">Add Devotional</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dallin Tippets | WDD 130</p>
+  </footer>
+</body>
+</html>

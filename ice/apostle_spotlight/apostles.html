@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apostle Spotlight</title>
+  <style>
+    :root {
+      --body-bg: #E8ECEC;
+      --text-color: #ffffff;
+      --border-color: #0a0a0a;
+      --outer-ring: #ffffff;
+      --inner-ring: #3c3c3c;
+      --avatar-size: 120px;
+      --gap: 24px;
+      --radius: 24px;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--body-bg);
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .stage {
+      position: relative;
+      width: min(95vw, 1100px);
+      border: 8px solid var(--border-color);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background-image: url('images/christus.webp');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.35);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 30px 20px 40px;
+      color: var(--text-color);
+      text-align: center;
+    }
+
+    h1, h2 {
+      margin: 0 0 20px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 40px);
+    }
+
+    h2 {
+      font-size: clamp(20px, 3vw, 28px);
+    }
+
+    .row, .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--gap);
+      margin-bottom: 30px;
+    }
+
+    .avatar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: var(--avatar-size);
+    }
+
+    .avatar img {
+      width: var(--avatar-size);
+      height: var(--avatar-size);
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--outer-ring);
+      background: var(--inner-ring);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 0.9em;
+      font-weight: bold;
+      color: var(--text-color);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 700px) {
+      :root {
+        --avatar-size: 95px;
+        --gap: 18px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      :root {
+        --avatar-size: 80px;
+        --gap: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>First Presidency</h1>
+      <section class="row">
+        <div class="avatar"><img src="images/nelson.webp" alt="Nelson"><div class="caption">Nelson</div></div>
+        <div class="avatar"><img src="images/oaks.webp" alt="Oaks"><div class="caption">Oaks</div></div>
+        <div class="avatar"><img src="images/eyring.webp" alt="Eyring"><div class="caption">Eyring</div></div>
+      </section>
+
+      <h2>Quorum of the Twelve Apostles</h2>
+      <section class="grid">
+        <div class="avatar"><img src="images/anderson.webp" alt="Anderson"><div class="caption">Anderson</div></div>
+        <div class="avatar"><img src="images/bednar.webp" alt="Bednar"><div class="caption">Bednar</div></div>
+        <div class="avatar"><img src="images/christofferson.webp" alt="Christofferson"><div class="caption">Christofferson</div></div>
+        <div class="avatar"><img src="images/cook.webp" alt="Cook"><div class="caption">Cook</div></div>
+        <div class="avatar"><img src="images/gong.webp" alt="Gong"><div class="caption">Gong</div></div>
+        <div class="avatar"><img src="images/holland.webp" alt="Holland"><div class="caption">Holland</div></div>
+        <div class="avatar"><img src="images/kearon.webp" alt="Kearon"><div class="caption">Kearon</div></div>
+        <div class="avatar"><img src="images/rasband.webp" alt="Rasband"><div class="caption">Rasband</div></div>
+        <div class="avatar"><img src="images/renlund.webp" alt="Renlund"><div class="caption">Renlund</div></div>
+        <div class="avatar"><img src="images/soares.webp" alt="Soares"><div class="caption">Soares</div></div>
+        <div class="avatar"><img src="images/stevenson.webp" alt="Stevenson"><div class="caption">Stevenson</div></div>
+        <div class="avatar"><img src="images/uchtdorf.webp" alt="Uchtdorf"><div class="caption">Uchtdorf</div></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

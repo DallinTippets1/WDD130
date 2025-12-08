@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Flags</title>
+    <style>
+      body {
+        background-color: #777777;
+        margin: 0;
+        padding: 10px;
+      }
+      h1 {
+        margin: 10px;
+      }
+      header > h1 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+
+      /* == Chile ===================================================== */
+
+      #white {
+        height: 100px;
+        width: 300px;
+        background-color: white;
+      }
+
+      #blue {
+        height: 100px;
+        width: 100px;
+        background-color: rgb(0, 4, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #red {
+        height: 100px;
+        width: 300px;
+        background-color: red;
+      }
+
+      .row {
+        display: flex;
+      }
+
+      .star {
+        width: 70px;
+        aspect-ratio: 1;
+        background: white;
+        clip-path: polygon(
+          50% 0,
+          79% 90%,
+          2% 35%,
+          98% 35%,
+          21% 90%
+        );
+        transform: translate(-3px, -6px); /* ✔ FIXED STAR POSITION */
+      }
+
+      /* == Denmark ===================================================== */
+
+      #denmark {
+        display: grid;
+        height: 200px;
+        width: 300px;
+        background-color: white;
+        grid-template-columns: 3fr 1fr 3fr;
+        grid-template-rows: 3fr 1fr 3fr;
+        border: 2px solid black;
+      }
+
+      #dred {
+        background-color: red;
+        border: 2px solid black;
+      }
+
+      /* == Finland ===================================================== */
+
+      #finland {
+        display: grid;
+        height: 200px;
+        width: 500px;
+        background-color: white;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 2fr 1fr 2fr;
+        border: 2px solid black;
+      }
+
+      .blue {
+        background-color: #003580;
+        border: 2px solid black;
+      }
+
+      .fwhite {
+        background-color: white;
+        border: 2px solid black;
+      }
+
+      /* == Benin ===================================================== */
+
+      #benin {
+        display: grid;
+        height: 200px;
+        width: 300px;
+        border: 2px solid black;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      #bgreen {
+        background-color: #008751;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+      }
+
+      #byellow {
+        background-color: #fcd116;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      #bred {
+        background-color: #e8112d;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+
+      /* == Italy ===================================================== */
+
+      #italy {
+        display: grid;
+        height: 200px;
+        width: 300px;
+        border: 2px solid black;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      #igreen {
+        background-color: #009246;
+      }
+
+      #iwhite {
+        background-color: white;
+      }
+
+      #ired {
+        background-color: #ce2b37;
+      }
+
+      /* == Central African Republic =================================== */
+
+      #car {
+        position: relative;
+        display: grid;
+        height: 200px;
+        width: 300px;
+        border: 2px solid black;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+      }
+
+      #car-blue {
+        background-color: #003082;
+        grid-row: 1 / 2;
+      }
+
+      #car-white {
+        background-color: white;
+        grid-row: 2 / 3;
+      }
+
+      #car-green {
+        background-color: #009739;
+        grid-row: 3 / 4;
+      }
+
+      #car-yellow {
+        background-color: #ffce00;
+        grid-row: 4 / 5;
+      }
+
+      #car-red {
+        position: absolute;
+        background-color: #d21034;
+        width: 60px;
+        height: 100%;
+        left: 120px;
+        top: 0;
+      }
+
+      #car-star {
+        position: absolute;
+        color: yellow;
+        font-size: 45px;
+        top: 5px;
+        left: 16px;
+      }
+
+      #car-star::before {
+        content: "★";
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Country Flags</h1>
+    </header>
+
+    <!-- Chile -->
+    <h1>Chile</h1>
+    <div class="row">
+      <div id="blue">
+        <div class="star"></div>
+      </div>
+      <div id="white"></div>
+    </div>
+
+    <div id="red"></div>
+    <hr />
+
+    <!-- Denmark -->
+    <h1>Denmark</h1>
+    <div id="denmark">
+      <div id="dred"></div>
+      <div></div>
+      <div id="dred"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div id="dred"></div>
+      <div></div>
+      <div id="dred"></div>
+    </div>
+    <hr />
+
+    <!-- Finland -->
+    <h1>Finland</h1>
+    <div id="finland">
+      <div class="fwhite"></div>
+      <div class="blue"></div>
+      <div class="fwhite"></div>
+      <div class="blue"></div>
+      <div class="blue"></div>
+      <div class="blue"></div>
+      <div class="fwhite"></div>
+      <div class="blue"></div>
+      <div class="fwhite"></div>
+    </div>
+    <hr />
+
+    <!-- Benin -->
+    <h1>Benin</h1>
+    <div id="benin">
+      <div id="bgreen"></div>
+      <div id="byellow"></div>
+      <div id="bred"></div>
+    </div>
+    <hr />
+
+    <!-- Italy -->
+    <h1>Italy</h1>
+    <div id="italy">
+      <div id="igreen"></div>
+      <div id="iwhite"></div>
+      <div id="ired"></div>
+    </div>
+    <hr />
+
+    <!-- C.A.R. -->
+    <h1>Central African Republic</h1>
+    <div id="car">
+      <div id="car-blue"></div>
+      <div id="car-white"></div>
+      <div id="car-green"></div>
+      <div id="car-yellow"></div>
+      <div id="car-red"></div>
+      <div id="car-star"></div>
+    </div>
+    <hr />
+  </body>
+</html>
