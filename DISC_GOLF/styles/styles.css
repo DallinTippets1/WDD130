@@ -1,4 +1,16 @@
 /* BASIC PAGE SETUP */
+/* Load Google Fonts: headings and body (Playfair Display + Merriweather) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap');
+
+:root {
+  --primary: #96CADA; /* light blue */
+  --secondary: #023554; /* dark blue */
+  --accent1: #408251; /* sea green */
+  --accent2: #F3C234; /* saffron */
+  --accent3: #B75139; /* jasper */
+  --muted: #cfd8e3; /* light border */
+  --page-bg: #f5f5f5;
+}
 *,
 *::before,
 *::after {
@@ -7,9 +19,14 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #f5f5f5;
-  color: #023554;
+  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+  background-color: var(--page-bg);
+  color: var(--secondary);
+}
+
+/* Apply paragraph/body text to Merriweather, keep headings in Playfair Display */
+p, li, .hole-card p, .feature-card p {
+  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
 }
 
 /* Make all images fill their boxes and sit on top layer */
@@ -35,8 +52,7 @@ main {
   padding: 0.75rem 1.5rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  border-bottom: 2px solid #cfd8e3;
+  border-bottom: 2px solid var(--muted);
   background-color: #ffffff;
 }
 
@@ -45,20 +61,21 @@ main {
   height: 60px;
   border-radius: 50%;
   overflow: hidden;       /* makes logo appear circular */
-  border: 3px solid #023554;
+  border: 3px solid var(--secondary);
   flex-shrink: 0;
 }
 
 .site-header h1 {
   margin: 0;
   font-size: 2rem;
+  font-family: 'Playfair Display', serif;
 }
 
 /* FULL-WIDTH HERO SECTION */
 .hero {
   width: 100%;
   margin: 1rem 0;
-  border-bottom: 2px solid #cfd8e3;
+  border-bottom: 2px solid var(--muted);
   overflow: hidden;
   border-radius: 0.75rem;
 }
@@ -88,6 +105,7 @@ main {
 .tagline h2 {
   margin: 0;
   font-size: 1.7rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .tagline-lines {
@@ -102,7 +120,7 @@ main {
   width: 60%;
   height: 3px;
   border-radius: 999px;
-  background: linear-gradient(to right, #96cada, #b75139);
+  background: linear-gradient(to right, var(--primary), var(--accent3));
 }
 
 /* FEATURE CARDS ROW */
@@ -124,6 +142,7 @@ main {
 .feature-card h3 {
   margin-top: 0.2rem;
   margin-bottom: 0.75rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .feature-card a {
@@ -138,7 +157,7 @@ main {
   border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
-  background-color: #dde7f0;
+  background-color: var(--primary);
 }
 
 /* FOOTER */
@@ -147,7 +166,7 @@ main {
   margin: 0 auto;
   padding: 0.8rem 1.5rem;
   background-color: #ffffff;
-  border-top: 2px solid #cfd8e3;
+  border-top: 2px solid var(--muted);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -187,14 +206,22 @@ main {
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  border-bottom: 2px solid #cfd8e3;
+  position: relative;
+  border-bottom: 2px solid var(--muted);
   background-color: #ffffff;
 }
 
+.sub-header .logo-box {
+  flex-shrink: 0;
+}
+
 .sub-header h1 {
-  margin: 0 auto;
+  margin: 0;
   font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 /* Main wrapper for Holes page */
@@ -228,7 +255,7 @@ main {
   background-color: #ffffff;
   border-radius: 0.75rem;
   padding: 1rem;
-  border: 1px solid #cfd8e3;
+  border: 1px solid var(--muted);
   text-align: left;
   box-shadow: 0 4px 10px rgba(0,0,0,0.06);
 }
@@ -238,7 +265,7 @@ main {
   height: auto;
   aspect-ratio: 4 / 3;
   border-radius: 0.5rem;
-  border: 2px solid #023554;
+  border: 2px solid var(--secondary);
   margin-bottom: 0.5rem;
 }
 
@@ -258,5 +285,5 @@ main {
   padding: 1rem 1.5rem;
   text-align: center;
   background-color: #ffffff;
-  border-top: 2px solid #cfd8e3;
+  border-top: 2px solid var(--muted);
 }

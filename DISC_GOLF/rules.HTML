@@ -7,21 +7,25 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <span class="logo-mark">DG</span>
-      <span class="logo-text">Disc Golf at BYU–Idaho</span>
+  <header class="site-header">
+    <div class="logo-box">
+      <img src="images/logo.png" alt="Disc golf logo">
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="holes.html">Holes</a>
-      <a href="rules.html" class="active">Disc Golf Rules</a>
-    </nav>
+    <h1>Disc Golf at BYU–Idaho</h1>
   </header>
 
   <main>
+    <!-- HERO -->
+    <section class="hero">
+      <img src="images/hero-disc.jpg" alt="Disc golf hero image">
+    </section>
+
+    <!-- TAGLINE -->
+    <section class="tagline">
+      <h2>Disc Golf Rules</h2>
+    </section>
+
     <section class="section">
-      <h1>Disc Golf Rules</h1>
       <p>
         Disc golf is played much like traditional golf, but instead of hitting a ball into a hole,
         players throw a flying disc (Frisbee) into a metal basket with hanging chains. The goal is to
@@ -105,8 +109,13 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Disc Golf at BYU–Idaho &bull; WDD 130</p>
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="images/logo.png" alt="logo">
+    </div>
+    <div class="footer-center">
+      <p>&copy; <span id="year"></span> Disc Golf at BYU–Idaho &bull; WDD 130</p>
+    </div>
   </footer>
 
   <script>
